@@ -1,4 +1,4 @@
-package main
+package day05
 
 import (
 	"fmt"
@@ -9,12 +9,6 @@ import (
 )
 
 var mutex sync.Mutex
-
-func main() {
-	lastState := playWithNewMachine()
-
-	fmt.Println(getTopCrates(lastState))
-}
 
 func getTopCrates(state map[int][]rune) (res string) {
 	for i := 1; i <= len(state); i++ {
